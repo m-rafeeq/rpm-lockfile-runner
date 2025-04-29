@@ -1,13 +1,19 @@
+
+
+
+
 arches:
 - x86_64
-- s390x
 stages:
-- image: registry.redhat.io/ubi8/go-toolset:1.22@sha256:a1a37882bbcf1c0f1115d478d5ea9f74b496b8c753d5e4e431a70786e2dbcbfc
+- image: registry.access.redhat.com/ubi9/python-312:9.6-1755735361
   packages:
-    - cmake
-    - clang
-    - openssl
-- image: registry.redhat.io/ubi8/ubi-minimal@sha256:33161cf5ec11ea13bfe60cad64f56a3aa4d893852e8ec44b2fd2a6b40cc38539
-  packages:
-    - ca-certificates
-    - wget
+    - cuda-cudart-12-8
+    - cuda-compat-12-8
+    - cuda-nvcc-12-8
+    - libibverbs-utils
+    - infiniband-diags
+    - libibumad3
+    - librdmacm
+    - librdmacm-utils
+    - rdma-core
+    - mlnx-tools
